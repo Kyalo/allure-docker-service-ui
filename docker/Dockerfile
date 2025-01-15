@@ -1,5 +1,5 @@
 ######
-FROM node:12.18.3-buster-slim AS builder
+FROM node:12.22.12-bullseye-slim AS builder
 ENV ROOT=/code
 WORKDIR $ROOT
 COPY ui $ROOT
@@ -7,7 +7,7 @@ RUN npm install && \
     npm run build
 
 ######
-FROM node:12.18.3-buster-slim
+FROM node:12.22.12-bullseye-slim
 ARG BUILD_DATE
 ARG VERSION
 ARG VCS_REF
