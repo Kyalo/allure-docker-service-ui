@@ -94,7 +94,7 @@ instance.interceptors.response.use(undefined, (error) => {
     type = errors.GENERIC_ERROR;
   }
 
-  if (status === 401) {
+  if (status === "401") {
     redirect = true;
   }
   return Promise.reject({ message, stackTrace, type, status, redirect });

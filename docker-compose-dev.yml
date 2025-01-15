@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   allure-docker-service-ui:
     build:
@@ -34,4 +32,4 @@ services:
     ports:
       - "5050:5050"
     volumes:
-      - ${PWD}/projects:/app/projects
+      - "D:/Projects/allure-docker-service-ui/projects:/app/projects"
