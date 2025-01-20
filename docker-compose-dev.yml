@@ -15,8 +15,10 @@ services:
       - "7474:5252"
 
   allure:
-    image: "frankescobar/allure-docker-service"
+    image: "frankescobar/allure-docker-service:2.27.0"
+    user: 1000:1000
     environment:
+      DEV_MODE: 1
       CHECK_RESULTS_EVERY_SECONDS: NONE
       KEEP_HISTORY: 1
       KEEP_HISTORY_LATEST: 12
@@ -32,4 +34,4 @@ services:
     ports:
       - "5050:5050"
     volumes:
-      - "D:/Projects/allure-docker-service-ui/projects:/app/projects"
+      - "${PWD}/projects:/app/projects"
