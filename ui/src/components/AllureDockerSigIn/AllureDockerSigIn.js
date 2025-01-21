@@ -20,7 +20,7 @@ import { redirectRoot } from "../../utility/navigate";
 
 import axios from "../../api/axios-allure-docker";
 import allure from "../../assets/images/allure.png";
-import docker from "../../assets/images/docker.png";
+import docker from "../../assets/images/eclectics.png";
 
 function Copyright() {
   return (

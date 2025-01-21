@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 
 import allure from "../../assets/images/allure.png";
-import docker from "../../assets/images/docker.png";
+import docker from "../../assets/images/eclectics.png";
 
 const styles = (theme) => ({
   root: {
