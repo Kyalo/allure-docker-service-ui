@@ -27,9 +27,9 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       <Link
         color="inherit"
-        href="https://github.com/fescobar/allure-docker-service-ui"
+        href="https://eclectics.io/"
       >
-        Allure Docker Service UI
+        Test Automation Reports Dashboard
       </Link>{" "}
       {new Date().getFullYear()}
       {" (The best year ever)"}
@@ -158,7 +158,7 @@ class AllureDockerSignIn extends Component {
               <img src={docker} alt="docker" height="100" />
             </div>
             <Typography component="h1" variant="h5" align="center">
-              Allure Docker Service UI
+              Test Automation Reports Dashboard
             </Typography>
             <form className={classes.form} noValidate onSubmit={this.signin}>
               <TextField

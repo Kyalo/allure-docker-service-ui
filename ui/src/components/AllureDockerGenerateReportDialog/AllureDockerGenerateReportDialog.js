@@ -10,7 +10,7 @@ import { withRouter } from "react-router-dom";
 import axios from "../../api/axios-allure-docker";
 import { redirect } from "../../utility/navigate";
 
-const executionName = "Allure Docker Service UI"
+const executionName = "Test Automation Reports Dashboard"
 class AllureDockerGenerateReportDialog extends Component {
   generateReport = (projectId) => {
     this.props.showProgress(true);

@@ -1,4 +1,4 @@
-name: Allure Docker Service UI Workflow
+name: Test Automation Reports Workflow
 
 on:
   push:
