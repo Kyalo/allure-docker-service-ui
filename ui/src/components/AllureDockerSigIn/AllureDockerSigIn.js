@@ -29,10 +29,9 @@ function Copyright() {
         color="inherit"
         href="https://eclectics.io/"
       >
-        Test Automation Reports Dashboard
+        Powered by PPQA Team
       </Link>{" "}
       {new Date().getFullYear()}
-      {" (The best year ever)"}
     </Typography>
   );
 }
@@ -156,6 +155,7 @@ class AllureDockerSignIn extends Component {
             <div align="center">
               {/* <img src={allure} alt="allure" height="100" /> */}
               <img src={eclectics} alt="eclectics" height="50" />
+              <br/>
             </div>
             <Typography component="h1" variant="h5" align="center">
               Test Automation Reports Dashboard
