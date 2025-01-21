@@ -155,7 +155,7 @@ class AllureDockerSignIn extends Component {
           <div className={classes.paper}>
             <div align="center">
               {/* <img src={allure} alt="allure" height="100" /> */}
-              <img src={eclectics} alt="eclectics" height="100" />
+              <img src={eclectics} alt="eclectics" height="70" />
             </div>
             <Typography component="h1" variant="h5" align="center">
               Test Automation Reports Dashboard
