@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 
-import IconButton from "@material-ui/core/IconButton";
-import InfoIcon from "@material-ui/icons/Info";
-import LanguageIcon from "@material-ui/icons/Language";
+// import IconButton from "@material-ui/core/IconButton";
+// import InfoIcon from "@material-ui/icons/Info";
+// import LanguageIcon from "@material-ui/icons/Language";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Switch from "@material-ui/core/Switch";
 import { withRouter } from "react-router-dom";
 
-import SwaggerLogo from "../../components/SwaggerLogo/SwaggerLogo";
-import AllureDockerInfoDialog from "../../components/AllureDockerInfoDialog/AllureDockerInfoDialog";
-import AllureDockerLanguagesMenu from "../../components/AllureDockerLanguagesMenu/AllureDockerLanguagesMenu";
+// import SwaggerLogo from "../../components/SwaggerLogo/SwaggerLogo";
+// import AllureDockerInfoDialog from "../../components/AllureDockerInfoDialog/AllureDockerInfoDialog";
+// import AllureDockerLanguagesMenu from "../../components/AllureDockerLanguagesMenu/AllureDockerLanguagesMenu";
 
 class AllureDockerMobileMenu extends Component {
   state = {
@@ -18,25 +18,25 @@ class AllureDockerMobileMenu extends Component {
     languagesAnchorEl: null,
   };
 
-  openInfoDialog = () => {
-    this.setState({ infoDialog: true });
-  };
+  // openInfoDialog = () => {
+  //   this.setState({ infoDialog: true });
+  // };
 
-  closeInfoDialog = () => {
-    this.setState({ infoDialog: false });
-  };
+  // closeInfoDialog = () => {
+  //   this.setState({ infoDialog: false });
+  // };
 
-  closeLanguagesMenu = () => {
-    this.setState({ languagesAnchorEl: null });
-  };
+  // closeLanguagesMenu = () => {
+  //   this.setState({ languagesAnchorEl: null });
+  // };
 
-  openLanguagesMenu = (event) => {
-    this.setState({ languagesAnchorEl: event.currentTarget });
-  };
+  // openLanguagesMenu = (event) => {
+  //   this.setState({ languagesAnchorEl: event.currentTarget });
+  // };
 
-  goToSwagger = () => {
-    window.open(`${window._env_.ALLURE_DOCKER_API_URL}/swagger`, "_blank");
-  };
+  // goToSwagger = () => {
+  //   window.open(`${window._env_.ALLURE_DOCKER_API_URL}/swagger`, "_blank");
+  // };
 
   render() {
     return (
@@ -57,7 +57,7 @@ class AllureDockerMobileMenu extends Component {
             />
             <p>Dark Mode</p>
           </MenuItem>
-          <MenuItem onClick={this.openLanguagesMenu}>
+          {/* <MenuItem onClick={this.openLanguagesMenu}>
             <IconButton color="inherit">
               <LanguageIcon />
             </IconButton>
@@ -68,22 +68,22 @@ class AllureDockerMobileMenu extends Component {
               <InfoIcon />
             </IconButton>
             <p>Info</p>
-          </MenuItem>
-          <MenuItem onClick={this.goToSwagger}>
+          </MenuItem> */}
+          {/* <MenuItem onClick={this.goToSwagger}>
             <IconButton color="inherit">
               <SwaggerLogo height="100%" />
             </IconButton>
             <p>Swagger Doc</p>
-          </MenuItem>
+          </MenuItem> */}
         </Menu>
-        <AllureDockerInfoDialog
+        {/* <AllureDockerInfoDialog
           open={this.state.infoDialog}
           handleCloseDialog={this.closeInfoDialog}
         />
         <AllureDockerLanguagesMenu
           closeLanguagesMenu={this.closeLanguagesMenu}
           anchorEl={this.state.languagesAnchorEl}
-        />
+        /> */}
       </React.Fragment>
     );
   }
