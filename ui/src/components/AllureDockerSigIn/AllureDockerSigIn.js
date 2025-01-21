@@ -19,8 +19,8 @@ import { setRoles } from "../../utility/user-actions";
 import { redirectRoot } from "../../utility/navigate";
 
 import axios from "../../api/axios-allure-docker";
-import allure from "../../assets/images/allure.png";
-import docker from "../../assets/images/eclectics.png";
+// import allure from "../../assets/images/allure.png";
+import eclectics from "../../assets/images/eclectics.png";
 
 function Copyright() {
   return (
@@ -154,8 +154,8 @@ class AllureDockerSignIn extends Component {
           <CssBaseline />
           <div className={classes.paper}>
             <div align="center">
-              <img src={allure} alt="allure" height="100" />
-              <img src={docker} alt="docker" height="100" />
+              {/* <img src={allure} alt="allure" height="100" /> */}
+              <img src={eclectics} alt="eclectics" height="100" />
             </div>
             <Typography component="h1" variant="h5" align="center">
               Test Automation Reports Dashboard
