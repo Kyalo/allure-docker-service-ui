@@ -20,7 +20,7 @@ LABEL org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.vcs-ref=${VCS_REF} \
     org.label-schema.vcs-type="Git" \
     org.label-schema.vcs-url="" \
-    authors="Frank Escobar, Maurice Kyalo"
+    org.label-schema.authors="Frank Escobar <fescobarsystems@gmail.com>, Maurice Kyalo <mrckyalo@gmail.com>"
 
 RUN apt-get update && \
     apt install curl -y

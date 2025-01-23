@@ -340,88 +340,93 @@ class AllureDockerProject extends Component {
     }
 
     let buttons = [];
-    if (!this.state.projectNotFound) {
-      buttons.push(
-        <Button
-          variant="contained"
-          color="secondary"
-          onClick={this.openDeleteProjectDialog}
-          key="delete"
-          disabled={!isAdmin()}
-        >
-          Delete Project
-        </Button>
-      );
+    if isAdmin()) {
+      if (!this.state.projectNotFound) {
+        buttons.push(
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={this.openDeleteProjectDialog}
+            key="delete"
+            disabled={!isAdmin()}
+          >
+            Delete Project
+          </Button>
+        );
+      }
+
+      if (
+        !reportSelectedValue ||
+        reportSelectedValue === "latest" ||
+        reports.length === 0
+      ) {
+        buttons.push(
+          <Button
+            key="send-results"
+            onClick={this.openSendResultsDialog}
+            disabled={!isAdmin()}
+          >
+            Send Results
+          </Button>
+        );
+        buttons.push(
+          <Button
+            key="generate-report"
+            onClick={this.openGenerateReportDialog}
+            disabled={!isAdmin()}
+          >
+            Generate Report
+          </Button>
+        );
+        buttons.push(
+          <Button
+            key="clean-results"
+            onClick={this.openCleanResultsDialog}
+            disabled={!isAdmin()}
+          >
+            Clean Results
+          </Button>
+        );
+        buttons.push(
+          <Button
+            key="clean-history"
+            onClick={this.openCleanHistoryDialog}
+            disabled={!isAdmin()}
+          >
+            Clean History
+          </Button>
+        );
+        buttons.push(
+          <Button
+            key="get-emailable-report"
+            onClick={() => this.goToEmailableReport(projectId)}
+            disabled={!isAdmin()}
+          >
+            Get Emailable Report
+          </Button>
+        );
+        buttons.push(
+          <Button
+            key="export-emailable-report"
+            onClick={() => this.exportEmailableReport(projectId)}
+            disabled={!isAdmin()}
+          >
+            Export Emailable Report
+          </Button>
+        );
+        buttons.push(
+          <Button
+            key="export-full-report"
+            onClick={() => this.exportFullReport(projectId)}
+            disabled={!isAdmin()}
+          >
+            Export Full Report
+          </Button>
+        );
+      }
     }
 
-    if (
-      !reportSelectedValue ||
-      reportSelectedValue === "latest" ||
-      reports.length === 0
-    ) {
-      buttons.push(
-        <Button
-          key="send-results"
-          onClick={this.openSendResultsDialog}
-          disabled={!isAdmin()}
-        >
-          Send Results
-        </Button>
-      );
-      buttons.push(
-        <Button
-          key="generate-report"
-          onClick={this.openGenerateReportDialog}
-          disabled={!isAdmin()}
-        >
-          Generate Report
-        </Button>
-      );
-      buttons.push(
-        <Button
-          key="clean-results"
-          onClick={this.openCleanResultsDialog}
-          disabled={!isAdmin()}
-        >
-          Clean Results
-        </Button>
-      );
-      buttons.push(
-        <Button
-          key="clean-history"
-          onClick={this.openCleanHistoryDialog}
-          disabled={!isAdmin()}
-        >
-          Clean History
-        </Button>
-      );
-      buttons.push(
-        <Button
-          key="get-emailable-report"
-          onClick={() => this.goToEmailableReport(projectId)}
-        >
-          Get Emailable Report
-        </Button>
-      );
-      buttons.push(
-        <Button
-          key="export-emailable-report"
-          onClick={() => this.exportEmailableReport(projectId)}
-        >
-          Export Emailable Report
-        </Button>
-      );
-      buttons.push(
-        <Button
-          key="export-full-report"
-          onClick={() => this.exportFullReport(projectId)}
-        >
-          Export Full Report
-        </Button>
-      );
-    }
-
-    const buttonsGroup = (
+    const buttonsGroup = buttons.length > 0 && (
       <ButtonGroup
         size="large"
         color="primary"
