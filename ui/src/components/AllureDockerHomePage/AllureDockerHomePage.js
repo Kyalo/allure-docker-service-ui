@@ -5,8 +5,8 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 
-import allure from "../../assets/images/allure.png";
-import docker from "../../assets/images/docker.png";
+// import allure from "../../assets/images/allure.png";
+import eclectics from "../../assets/images/eclectics.png";
 
 const styles = (theme) => ({
   root: {
@@ -36,10 +36,10 @@ class AllureDockerHomePage extends Component {
           <Grid item xs={12}>
             <Paper className={classes.paper}>
               <div style={{ height: "100%" }} align="center">
-                <img src={allure} alt="allure" />
-                <img src={docker} alt="docker" />
+                {/* <img src={allure} alt="allure" /> */}
+                <img src={eclectics} alt="eclectics" />
                 <Typography variant="h3" color="textSecondary" align="center">
-                  ALLURE DOCKER SERVICE UI
+                  Test Automation Reports Dashboard
                 </Typography>
               </div>
             </Paper>

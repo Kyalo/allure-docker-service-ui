@@ -19,20 +19,19 @@ import { setRoles } from "../../utility/user-actions";
 import { redirectRoot } from "../../utility/navigate";
 
 import axios from "../../api/axios-allure-docker";
-import allure from "../../assets/images/allure.png";
-import docker from "../../assets/images/docker.png";
+// import allure from "../../assets/images/allure.png";
+import eclectics from "../../assets/images/eclectics.png";
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       <Link
         color="inherit"
-        href="https://github.com/fescobar/allure-docker-service-ui"
+        href="https://eclectics.io/"
       >
-        Allure Docker Service UI
+        Powered by PPQA Team
       </Link>{" "}
       {new Date().getFullYear()}
-      {" (The best year ever)"}
     </Typography>
   );
 }
@@ -154,11 +153,12 @@ class AllureDockerSignIn extends Component {
           <CssBaseline />
           <div className={classes.paper}>
             <div align="center">
-              <img src={allure} alt="allure" height="100" />
-              <img src={docker} alt="docker" height="100" />
+              {/* <img src={allure} alt="allure" height="100" /> */}
+              <img src={eclectics} alt="eclectics" height="50" />
+              <br/>
             </div>
             <Typography component="h1" variant="h5" align="center">
-              Allure Docker Service UI
+              Test Automation Reports Dashboard
             </Typography>
             <form className={classes.form} noValidate onSubmit={this.signin}>
               <TextField

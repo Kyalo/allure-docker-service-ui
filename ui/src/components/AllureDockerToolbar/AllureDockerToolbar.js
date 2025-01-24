@@ -8,8 +8,8 @@ import Divider from "@material-ui/core/Divider";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import HomeIcon from "@material-ui/icons/Home";
 import IconButton from "@material-ui/core/IconButton";
-import InfoIcon from "@material-ui/icons/Info";
-import LanguageIcon from "@material-ui/icons/Language";
+// import InfoIcon from "@material-ui/icons/Info";
+// import LanguageIcon from "@material-ui/icons/Language";
 import MenuIcon from "@material-ui/icons/Menu";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import SearchIcon from "@material-ui/icons/Search";
@@ -21,12 +21,12 @@ import Typography from "@material-ui/core/Typography";
 import { withRouter } from "react-router-dom";
 import { isAdmin } from "../../utility/user-actions";
 
-import SwaggerLogo from "../../components/SwaggerLogo/SwaggerLogo";
+// import SwaggerLogo from "../../components/SwaggerLogo/SwaggerLogo";
 
 import AllureDockerNewProjectDialog from "../AllureDockerNewProjectDialog/AllureDockerNewProjectDialog";
 import AllureDockerConfigDialog from "../AllureDockerConfigDialog/AllureDockerConfigDialog";
-import AllureDockerInfoDialog from "../AllureDockerInfoDialog/AllureDockerInfoDialog";
-import AllureDockerLanguagesMenu from "../AllureDockerLanguagesMenu/AllureDockerLanguagesMenu";
+// import AllureDockerInfoDialog from "../AllureDockerInfoDialog/AllureDockerInfoDialog";
+// import AllureDockerLanguagesMenu from "../AllureDockerLanguagesMenu/AllureDockerLanguagesMenu";
 import AllureDockerSignOutDialog from "../AllureDockerSignOutDialog/AllureDockerSignOutDialog";
 import { redirect, redirectRoot } from "../../utility/navigate";
 import axios from "../../api/axios-allure-docker";
@@ -100,8 +100,8 @@ class AllureDockerToolbar extends Component {
     newProjectDialog: false,
     configDialog: false,
     signOutDialog: false,
-    infoDialog: false,
-    languagesAnchorEl: null,
+    // infoDialog: false,
+    // languagesAnchorEl: null,
     searchResults: [],
   };
 
@@ -129,25 +129,25 @@ class AllureDockerToolbar extends Component {
     this.setState({ signOutDialog: false });
   };
 
-  openInfoDialog = () => {
-    this.setState({ infoDialog: true });
-  };
+  // openInfoDialog = () => {
+  //   this.setState({ infoDialog: true });
+  // };
 
-  closeInfoDialog = () => {
-    this.setState({ infoDialog: false });
-  };
+  // closeInfoDialog = () => {
+  //   this.setState({ infoDialog: false });
+  // };
 
-  closeLanguagesMenu = () => {
-    this.setState({ languagesAnchorEl: null });
-  };
+  // closeLanguagesMenu = () => {
+  //   this.setState({ languagesAnchorEl: null });
+  // };
 
-  openLanguagesMenu = (event) => {
-    this.setState({ languagesAnchorEl: event.currentTarget });
-  };
+  // openLanguagesMenu = (event) => {
+  //   this.setState({ languagesAnchorEl: event.currentTarget });
+  // };
 
-  goToSwagger = () => {
-    window.open(`${window._env_.ALLURE_DOCKER_API_URL}/swagger`, "_blank");
-  };
+  // goToSwagger = () => {
+  //   window.open(`${window._env_.ALLURE_DOCKER_API_URL}/swagger`, "_blank");
+  // };
 
   goToHome = () => {
     redirectRoot();
@@ -265,7 +265,9 @@ class AllureDockerToolbar extends Component {
           <AddCircle />
         </IconButton>
 
-        <IconButton color="inherit" onClick={this.openConfigDialog}>
+        {isSignInAnOption}
+
+        <IconButton color="inherit" onClick={this.openConfigDialog} disabled={!isAdmin()}>
           <SettingsIcon />
         </IconButton>
 
@@ -280,19 +282,19 @@ class AllureDockerToolbar extends Component {
             />
           </IconButton>
 
-          <IconButton color="inherit" onClick={this.openLanguagesMenu}>
+          {/* <IconButton color="inherit" onClick={this.openLanguagesMenu}>
             <LanguageIcon />
-          </IconButton>
+          </IconButton> */}
 
-          <Divider orientation="vertical" flexItem />
+          {/* <Divider orientation="vertical" flexItem /> */}
 
-          <IconButton color="inherit" onClick={this.openInfoDialog}>
+          {/* <IconButton color="inherit" onClick={this.openInfoDialog}>
             <InfoIcon />
-          </IconButton>
+          </IconButton> */}
 
-          <IconButton color="inherit" onClick={this.goToSwagger}>
+          {/* <IconButton color="inherit" onClick={this.goToSwagger}>
             <SwaggerLogo height="100%" />
-          </IconButton>
+          </IconButton> */}
         </div>
 
         <div className={classes.sectionMobile}>
@@ -321,7 +323,7 @@ class AllureDockerToolbar extends Component {
             open={this.state.signOutDialog}
             closeSignOutDialog={this.closeSignOutDialog}
           />
-          <AllureDockerInfoDialog
+          {/* <AllureDockerInfoDialog
             open={this.state.infoDialog}
             handleCloseDialog={this.closeInfoDialog}
           />
@@ -329,7 +331,7 @@ class AllureDockerToolbar extends Component {
             setAPIAlert={this.props.setAPIAlert}
             closeLanguagesMenu={this.closeLanguagesMenu}
             anchorEl={this.state.languagesAnchorEl}
-          />
+          /> */}
         </div>
       </Toolbar>
     );

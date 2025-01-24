@@ -1,5 +1,5 @@
 ######
-FROM node:12.18.3-buster-slim AS builder
+FROM node:12.22.12-bullseye-slim AS builder
 ENV ROOT=/code
 WORKDIR $ROOT
 COPY ui $ROOT
@@ -7,20 +7,20 @@ RUN npm install && \
     npm run build
 
 ######
-FROM node:12.18.3-buster-slim
+FROM node:12.22.12-bullseye-slim
 ARG BUILD_DATE
 ARG VERSION
 ARG VCS_REF
 LABEL org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.docker.dockerfile="docker/Dockerfile" \
     org.label-schema.license="MIT" \
-    org.label-schema.name="Allure Docker Service UI" \
+    org.label-schema.name="Test Automation Reports Dashboard" \
     org.label-schema.version=${VERSION} \
-    org.label-schema.description="UI Layer for Allure Docker Service container" \
+    org.label-schema.description="Test Automation Reports Dashboard" \
     org.label-schema.vcs-ref=${VCS_REF} \
     org.label-schema.vcs-type="Git" \
-    org.label-schema.vcs-url="https://github.com/fescobar/allure-docker-service-ui" \
-    authors="Frank Escobar <fescobar.systems@gmail.com>"
+    org.label-schema.vcs-url="" \
+    org.label-schema.authors="Frank Escobar <fescobarsystems@gmail.com>, Maurice Kyalo <mrckyalo@gmail.com>"
 
 RUN apt-get update && \
     apt install curl -y
