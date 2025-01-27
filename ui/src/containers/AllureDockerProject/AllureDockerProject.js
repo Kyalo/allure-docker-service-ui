@@ -340,7 +340,7 @@ class AllureDockerProject extends Component {
     }
 
     let buttons = [];
-    if isAdmin()) {
+    if (isAdmin()) {
       if (!this.state.projectNotFound) {
         buttons.push(
           <Button
