@@ -81,7 +81,7 @@ class AllureDockerBar extends Component {
           })}
         >
           <AllureDockerToolbar
-            title="Test Automation Reports Dashboard"
+            title="Allure Reports Dashboard"
             isSideDrawerOpen={this.state.openSideDrawer}
             handleSideDrawerOpen={this.handleSideDrawerOpen}
             handleSideDrawerClose={this.handleSideDrawerClose}
@@ -104,7 +104,7 @@ class AllureDockerBar extends Component {
         />
 
         <AllureDockerProjectsSideDrawer
-          title="Test Automation Reports Dashboard"
+          title="Allure Reports Dashboard"
           projects={this.props.projects}
           isSideDrawerOpen={this.state.openSideDrawer}
           handleSideDrawerClose={this.handleSideDrawerClose}

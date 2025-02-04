@@ -29,7 +29,7 @@ function Copyright() {
         color="inherit"
         href="https://eclectics.io/"
       >
-        Powered by PPQA Team
+        Powered by PPQA with ❤️
       </Link>{" "}
       {new Date().getFullYear()}
     </Typography>
@@ -158,7 +158,7 @@ class AllureDockerSignIn extends Component {
               <br/>
             </div>
             <Typography component="h1" variant="h5" align="center">
-              Test Automation Reports Dashboard
+              Allure Reports Dashboard
             </Typography>
             <form className={classes.form} noValidate onSubmit={this.signin}>
               <TextField

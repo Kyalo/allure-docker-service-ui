@@ -39,7 +39,7 @@ class AllureDockerHomePage extends Component {
                 {/* <img src={allure} alt="allure" /> */}
                 <img src={eclectics} alt="eclectics" />
                 <Typography variant="h3" color="textSecondary" align="center">
-                  Test Automation Reports Dashboard
+                  Allure Reports Dashboard
                 </Typography>
               </div>
             </Paper>

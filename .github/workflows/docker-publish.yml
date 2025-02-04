@@ -1,4 +1,4 @@
-name: Test Automation Reports Workflow
+name: Allure Reports Workflow
 
 on:
   push:
