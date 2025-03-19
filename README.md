@@ -158,6 +158,11 @@ If you want to use docker without sudo, read following links:
 ```sh
 docker build -t allure-ui-release -f docker/Dockerfile --build-arg VERSION=na --build-arg VCS_REF=na --build-arg BUILD_DATE=na .
 ```
+OR
+```sh
+docker build -t allure-ui-release -f docker/Dockerfile --build-arg VERSION=1.0.0 --build-arg VCS_REF=$(git rev-parse HEAD) --build-arg BUILD_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ") .
+
+```
 ### Run container
 ```sh
 docker run -d  -p 5252:5252 allure-ui-release

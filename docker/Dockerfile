@@ -19,7 +19,7 @@ LABEL org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.description="Test Automation Reports Dashboard" \
     org.label-schema.vcs-ref=${VCS_REF} \
     org.label-schema.vcs-type="Git" \
-    org.label-schema.vcs-url="" \
+    org.label-schema.vcs-url="https://github.com/Kyalo/allure-docker-service-ui" \
     org.label-schema.authors="Frank Escobar <fescobarsystems@gmail.com>, Maurice Kyalo <mrckyalo@gmail.com>"
 
 RUN apt-get update && \
@@ -48,4 +48,4 @@ HEALTHCHECK --interval=10s --timeout=60s --retries=3 \
 
 USER node
 
-CMD $ROOT/run.sh
+CMD ["/app/run.sh"]
